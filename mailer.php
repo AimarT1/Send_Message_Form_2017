@@ -19,7 +19,7 @@
         $email_headers = "From: $name, <$email>";
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "mareplex@tellimusejuht.ee";
+        $recipient = "tootmisjuht@tellimusejuht.ee";
         // Set the email subject.
         $subject = "Tööde statused!";
 
@@ -31,7 +31,7 @@
         // Send the email.
         //require_once ("db.php");
 
-       $db=new mysqli('192.168.1.35','root','','aimarDB');
+       $db=new mysqli('localhost','root','','aimarDB');
         if(mail("$recipient","$subject","$email_content","$email_headers"))
         //See oli vigane enne ://if (mail($recipient, $subject, $email_content, $email_headers))
         {
